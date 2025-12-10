@@ -85,7 +85,7 @@ export function DateTimeSelection({
                                     onSelectDate(new Date(e.target.value));
                                 }
                             }}
-                            className="w-full pl-10 pr-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all"
+                            className="w-full max-w-full box-border pl-10 pr-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all"
                         />
                     </div>
                 </div>
