@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ServiceSelection } from './steps/ServiceSelection';
 import { DateTimeSelection } from './steps/DateTimeSelection';
 import { CustomerDetails } from './steps/CustomerDetails';
@@ -41,6 +41,11 @@ export function BookingFlow() {
     const [state, setState] = useState<BookingState>(INITIAL_STATE);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [bookingId, setBookingId] = useState<string | null>(null);
+
+    // Scroll to top when step changes
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, [state.step]);
 
     const nextStep = () => setState(prev => ({ ...prev, step: prev.step + 1 }));
     const prevStep = () => setState(prev => ({ ...prev, step: prev.step - 1 }));
