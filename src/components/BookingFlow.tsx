@@ -57,7 +57,7 @@ export function BookingFlow() {
     };
 
     return (
-        <div className="w-full max-w-6xl mx-auto p-6 sm:p-8 bg-white shadow-xl rounded-2xl my-8 min-h-[600px] flex flex-col">
+        <div className="w-full max-w-6xl mx-auto p-4 sm:p-8 bg-white shadow-xl rounded-2xl overflow-hidden my-8 min-h-[600px] flex flex-col">
             {/* Progress Bar */}
             <div className="w-full grid grid-cols-4 mb-8 text-sm font-medium text-slate-400 border-b border-slate-100 pb-4">
                 {[1, 2, 3, 4].map(step => (

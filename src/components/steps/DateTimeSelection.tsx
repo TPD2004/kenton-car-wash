@@ -75,7 +75,6 @@ export function DateTimeSelection({
                 <div>
                     <label className="block text-sm font-medium text-slate-700 mb-2">Pick a Date</label>
                     <div className="relative">
-                        <CalendarIcon className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
                         <input
                             type="date"
                             min={new Date().toISOString().split('T')[0]}
@@ -85,7 +84,7 @@ export function DateTimeSelection({
                                     onSelectDate(new Date(e.target.value));
                                 }
                             }}
-                            className="w-full max-w-full box-border pl-10 pr-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all"
+                            className="w-full max-w-full box-border px-4 py-3 border border-slate-200 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all appearance-none"
                         />
                     </div>
                 </div>
